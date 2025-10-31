@@ -11,9 +11,10 @@ let seconds = 0;
 const timerInterval = () => {
   interval = setInterval(() => {
     seconds--;
+
     if (seconds < 0) {
       minutes--;
-      seconds = 8;
+      seconds = 59;
     }
     timer.textContent = `${minutes < 10 ? "0" + minutes : minutes}:${
       seconds < 10 ? "0" + seconds : seconds
@@ -31,3 +32,15 @@ const startTimer = () => {
   btnStart.disabled = true;
 };
 btnStart.addEventListener("click", startTimer);
+btnPause.addEventListener("click", () => {
+  clearInterval(interval);
+  btnStart.disabled = false;
+});
+btnReset.addEventListener("click", () => {
+  clearInterval(interval);
+
+  btnStart.disabled = false;
+  minutes = 0;
+  seconds = 0;
+  timer.textContent = `${"0" + minutes}:${"0" + seconds}`;
+});
