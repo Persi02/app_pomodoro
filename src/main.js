@@ -97,5 +97,6 @@ btnReset.addEventListener("click", () => {
   minutesLongPause = 15;
   seconds = 0;
   nbrWorks = 0;
+  statuts.textContent = "Status : Not started";
   timer.textContent = `00:${"0" + seconds}`;
 });
