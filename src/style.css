@@ -13,7 +13,7 @@
   @apply text-9xl font-bold;
 }
 .controls {
-  @apply flex gap-2;
+  @apply flex gap-4;
 }
 button {
   @apply px-4 py-2 text-white rounded-md cursor-pointer;
