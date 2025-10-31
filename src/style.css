@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+#app {
+  @apply bg-gray-300 h-screen w-screen flex items-center justify-center;
+}
+.wrap {
+  @apply flex flex-col items-center justify-center;
+}
+.timer {
+  @apply text-4xl font-bold;
+}
+.controls {
+  @apply flex gap-2;
+}
+button {
+  @apply px-4 py-2 text-white rounded-md;
+}
+.start {
+  @apply bg-green-500;
+}
+.pause {
+  @apply bg-yellow-500;
+}
+.reset {
+  @apply bg-red-500;
+}
