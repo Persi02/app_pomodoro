@@ -5,7 +5,7 @@ const btnPause = document.querySelector(".pause");
 const btnReset = document.querySelector(".reset");
 const timer = document.querySelector(".timer");
 let interval = null;
-let minutes = 0;
+let minutes = 25;
 let seconds = 0;
 
 const timerInterval = () => {
@@ -26,8 +26,6 @@ const timerInterval = () => {
 };
 
 const startTimer = () => {
-  minutes = 25;
-  seconds = 0;
   timerInterval();
   btnStart.disabled = true;
 };
@@ -40,7 +38,7 @@ btnReset.addEventListener("click", () => {
   clearInterval(interval);
 
   btnStart.disabled = false;
-  minutes = 0;
+  minutes = 25;
   seconds = 0;
-  timer.textContent = `${"0" + minutes}:${"0" + seconds}`;
+  timer.textContent = `00:${"0" + seconds}`;
 });
